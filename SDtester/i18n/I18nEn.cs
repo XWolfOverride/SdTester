@@ -23,6 +23,7 @@ namespace SDtester.i18n
         public override string MsgValidErrorTitle => "Validation error";
         public override string MsgValidErrorText => "Validation errors found.\r\n¿Do you want to keep the test file for analisys?";
         public override string AboutTitle => "About Sd Tester";
-        public override string AboutHeader => "Sd Tester 1.0";
+        public override string AboutText => "Checks SD fidelity creating a file for all the free space and verifying.";
+        public override string AboutTranslation => "Translation by XWolf Override.";
     }
 }

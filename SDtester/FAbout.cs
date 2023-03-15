@@ -17,6 +17,18 @@ namespace SDtester
         {
             InitializeComponent();
             Text = I18n.Get().AboutTitle;
+            lbInfo.Text = I18n.Get().AboutText;
+            lbTranslation.Text = I18n.Get().AboutTranslation;
+        }
+
+        private void llGO_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/XWolfOverride/SdTester");
+        }
+
+        private void llIcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://lukaszadam.com/");
         }
     }
 }

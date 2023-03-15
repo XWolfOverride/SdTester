@@ -10,15 +10,18 @@ namespace SDtester.i18n
     public abstract class I18n
     {
         protected I18n() { }
+        private static I18n last;
 
         public static I18n Get(string lang = null)
         {
             List<I18n> all = GetAll();
             if (lang == null)
                 lang = CultureInfo.CurrentCulture.TwoLetterISOLanguageName.ToLower();
+            if (last != null && last.Lang == lang)
+                return last;
             foreach (var i18n in all)
                 if (i18n.Lang == lang)
-                    return i18n;
+                    return last = i18n;
             return all[0];
         }
 
@@ -45,6 +48,7 @@ namespace SDtester.i18n
         public abstract string MsgValidErrorTitle { get; }
         public abstract string MsgValidErrorText { get; }
         public abstract string AboutTitle { get; }
-        public abstract string AboutHeader { get; }
+        public abstract string AboutText { get; }
+        public abstract string AboutTranslation { get; }
     }
 }

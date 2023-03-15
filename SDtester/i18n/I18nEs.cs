@@ -23,7 +23,8 @@ namespace SDtester.i18n
         public override string MsgValidErrorTitle => "Error de validación";
         public override string MsgValidErrorText => "Se han encontraod errores al validar la tarjeta.\r\n¿Desea conservar el archivo de pruebas para analizarlo?";
         public override string AboutTitle => "Acerca de Sd Tester";
-        public override string AboutHeader => "Sd Tester 1.0";
+        public override string AboutText => "Comprueba la fiabilidad de la SD generando un archivo que ocupa el espacio vacío y verificandolo despues.";
+        public override string AboutTranslation => "Idioma por XWolf Override.";
 
 
     }
