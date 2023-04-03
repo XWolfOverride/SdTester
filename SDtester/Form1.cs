@@ -74,6 +74,7 @@ namespace SDtester
 
         private void Start()
         {
+            lbProgress.ForeColor = SystemColors.ControlText;
             lbProgress.Text = I18n.Get().StatusStarting;
             btGo.Text = I18n.Get().ButtonCancel;
             if (tester == null)
@@ -89,6 +90,8 @@ namespace SDtester
                 catch (Exception ex)
                 {
                     lbProgress.Text = ex.GetType().Name + ": " + ex.Message;
+                    lbProgress.ForeColor = Color.Red;
+                    MessageBox.Show(lbProgress.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -175,7 +178,7 @@ namespace SDtester
 
         private void btAbout_Click(object sender, EventArgs e)
         {
-            FAbout fa=new FAbout();
+            FAbout fa = new FAbout();
             fa.ShowDialog();
         }
     }

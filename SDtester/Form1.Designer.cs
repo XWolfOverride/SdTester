@@ -169,6 +169,7 @@
             // 
             // btAbout
             // 
+            this.btAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btAbout.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAbout.Location = new System.Drawing.Point(438, 102);
             this.btAbout.Name = "btAbout";
